@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --aceternity-pink: rgba(218, 0, 171);
+  --aceternity-red: rgb(230, 64, 92);
+  --aceternity-orange: rgb(232, 98, 63);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-aceternity-pink: var(--aceternity-pink);
+  --color-aceternity-red: var(--aceternity-red);
+  --color-aceternity-orange: var(--aceternity-orange);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090b;
+    /* --background: radial-gradient(ellipse at bottom, #040b25 0%, #020617 100%); */
+    /* --background: radial-gradient(ellipse at bottom, #101c2a 0%, #020617 100%); */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.instagram-gradient {
+  background: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
