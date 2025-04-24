@@ -27,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${geistSans.className} antialiased mx-17`}>
         {/* <div className="w-full h-16 bg-white text-center text-black/90">
           NAVBAR
