@@ -20,11 +20,11 @@ export const Intro = () => {
           {/* <ColourfulText words={["James Leone"]} /> */}
         </h1>
       </div>
-      <div className="text-center">
+      <div className="">
         <h2 className="motto text-[2.75rem] text-slate-50">
           I thrive working on <br />
           {/* bg-linear-45 from-orange-400 via-purple-400 to-pink-400 text-transparent bg-clip-text  */}
-          <span className="text-[2.3rem]">
+          <div className="text-[2.3rem] flex justify-center">
             {/* <RotateText /> */}
             <ColourfulText
               words={[
@@ -34,7 +34,7 @@ export const Intro = () => {
                 "learning new skills",
               ]}
             />
-          </span>
+          </div>
         </h2>
       </div>
       <div>
