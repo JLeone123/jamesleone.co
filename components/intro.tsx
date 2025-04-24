@@ -12,7 +12,7 @@ export const Intro = () => {
   return (
     <section className="mx-5 ml-5 flex flex-col mt-25 justify-between gap-y-5">
       <div className="flex flex-col">
-        <h1 className="text-[4.6rem] text-slate-50">
+        <h1 className="text-[4.6rem] text-slate-50 tracking-[0rem]">
           Hello, I am <br />
           <span className="bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
             James Leone
@@ -21,10 +21,9 @@ export const Intro = () => {
         </h1>
       </div>
       <div className="">
-        <h2 className="motto text-[2.75rem] text-slate-50">
-          I thrive working on <br />
-          {/* bg-linear-45 from-orange-400 via-purple-400 to-pink-400 text-transparent bg-clip-text  */}
-          <div className="text-[2.3rem] flex justify-center">
+        <h2 className="motto text-[2.5rem] text-slate-50">
+          Always excited about... <br />
+          <div className="text-[2.5rem] flex justify-center">
             {/* <RotateText /> */}
             <ColourfulText
               words={[
@@ -50,7 +49,8 @@ export const Intro = () => {
       <div className="my-3 flex justify-center">
         <a
           href="#contact"
-          className="border-[0.05rem] border-zinc-950/70 bg-zinc-50 text-zinc-800 px-7 py-3 rounded-lg hover:text-slate-500/90"
+          className="border-[0.05rem] border-zinc-950/70 bg-zinc-50 text-zinc-800 px-7 py-3 rounded-lg hover:text-slate-950
+          hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition"
         >
           Let's connect!
         </a>
