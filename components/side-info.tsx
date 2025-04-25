@@ -1,11 +1,23 @@
+"use client";
+
 import React from "react";
 import { FaFacebookSquare, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+import { motion } from "motion/react";
 
 export const SideInfo = () => {
   return (
-    <div className="flex flex-col justify-around mt-25">
-      <div className="quote-card bg-zinc-800/30 text-[2rem] flex rounded-lg px-10">
-        <p className="">
+    <motion.div
+      className="flex flex-col justify-around mt-25"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        type: "tween",
+        duration: 0.75,
+        delay: 0.75,
+      }}
+    >
+      <div className="quote-card bg-zinc-800/30 text-[2rem] flex rounded-lg px-10 opacity-80">
+        <p>
           <span className="italic">
             "The best way to predict the future is to invent it."
           </span>
@@ -14,9 +26,9 @@ export const SideInfo = () => {
         </p>
       </div>
       <div className="flex justify-center w-full">
-        <p className="text-[2.25rem] italic max-w-52">
+        <p className="text-[2.25rem] italic max-w-80 text-slate-300">
           Designing your ideas,{" "}
-          <span className="px-1 bg-linear-45 from-aceternity-pink via-aceternity-red to-aceternity-orange text-slate-50 font-bold">
+          <span className="px-1 bg-linear-45 from-aceternity-pink via-aceternity-red to-aceternity-orange font-bold">
             better.
           </span>
         </p>
@@ -44,6 +56,6 @@ export const SideInfo = () => {
           <FaFacebookSquare />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 // import { RotateText } from "@/components/rotate-text";
 import { ColourfulText } from "./ui/colourful-text";
+import { motion } from "motion/react";
+
 // import { Geist } from "next/font/google";
 
 // const geistSans = Geist({
@@ -10,11 +14,20 @@ import { ColourfulText } from "./ui/colourful-text";
 
 export const Intro = () => {
   return (
-    <section className="mx-5 ml-5 flex flex-col mt-25 justify-between gap-y-5">
+    <motion.section
+      className="mx-5 ml-5 flex flex-col mt-25 justify-between gap-y-5"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "tween",
+        duration: 0.75,
+        delay: 0.75,
+      }}
+    >
       <div className="flex flex-col">
-        <h1 className="text-[4.6rem] text-slate-50 tracking-[0rem]">
-          Hello, I am <br />
-          <span className="bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
+        <h1 className="text-[3.75rem] text-slate-50 tracking-[0rem]">
+          Hello, I'm <br />
+          <span className="bg-linear-45 text-[4.5rem] from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
             James Leone
           </span>
           {/* <ColourfulText words={["James Leone"]} /> */}
@@ -23,7 +36,7 @@ export const Intro = () => {
       <div className="">
         <h2 className="motto text-[2.5rem] text-slate-50">
           Always excited about... <br />
-          <div className="text-[2.5rem] flex justify-center">
+          <div className="colorful-text text-[2.5rem] flex justify-center">
             {/* <RotateText /> */}
             <ColourfulText
               words={[
@@ -56,6 +69,6 @@ export const Intro = () => {
         </a>
       </div>
       {/* Philosopher, challenge-seeker, lifelong learner */}
-    </section>
+    </motion.section>
   );
 };

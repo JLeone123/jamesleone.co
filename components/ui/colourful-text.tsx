@@ -19,7 +19,7 @@ export function ColourfulText({ words }: { words: string[] }) {
 
   // set currentColor order and count, which initially is at zero.
   const [currentColors, setCurrentColors] = React.useState(colors);
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(1);
   const initialWord = words?.[0] ?? "James Leone";
   const [text, setText] = React.useState(initialWord);
 

@@ -1,12 +1,21 @@
+"use client";
 import React from "react";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export const Header = () => {
   return (
-    // <div className="w-full h-16 bg-white text-center text-black/90">NAVBAR</div>
     <header className="z-100 relative flex justify-center">
-      <div className="fixed w-full flex flex-row justify-center mt-3 backdrop-blur-[0.5rem]">
+      <motion.div
+        className="fixed w-full flex flex-row justify-center mt-3 backdrop-blur-[0.5rem]"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "tween",
+          duration: 0.75,
+        }}
+      >
         <nav className="rounded-full bg-transparent border border-slate-300/20 text-slate-300/80 z-100">
           <ul className="flex justify-center gap-x-20 px-10 py-4 cursor-pointer">
             {links.map((link) => {
@@ -20,7 +29,7 @@ export const Header = () => {
             })}
           </ul>
         </nav>
-      </div>
+      </motion.div>
     </header>
   );
 };
