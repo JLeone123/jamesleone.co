@@ -16,7 +16,10 @@ export const Header = () => {
           duration: 0.75,
         }}
       >
-        <nav className="rounded-full bg-transparent border border-slate-300/20 text-slate-300/80 z-100">
+        <nav
+          className="rounded-full bg-transparent border border-slate-300/20 text-slate-300/80 z-100
+        hover:scale-[1.05] focus:scale-[1.05] hover:outline-0 transition"
+        >
           <ul className="flex justify-center gap-x-20 px-10 py-4 cursor-pointer">
             {links.map((link) => {
               return (

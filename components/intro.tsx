@@ -15,7 +15,7 @@ import { motion } from "motion/react";
 export const Intro = () => {
   return (
     <motion.section
-      className="mx-5 ml-5 flex flex-col mt-25 justify-between gap-y-5"
+      className="flex flex-col mt-25 justify-between items-center gap-y-5"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

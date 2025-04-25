@@ -11,13 +11,11 @@ export default function Home() {
   return (
     // <Spotlight>
     <main>
-      <section className="relative flex flex-row gap-x-15">
+      <section className="relative flex flex-row gap-x-15 mt-7 max-h-svw">
         <Card />
         <Intro />
         <SideInfo />
       </section>
-
-      {/* <Contact /> */}
     </main>
     // </Spotlight>
   );
