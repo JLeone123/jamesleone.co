@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 export const Card = () => {
   return (
     <motion.div
-      className="flex flex-col items-center justify-around mt-25 rounded-lg bg-opacity-70 gap-y-10 bg-red-300"
+      className="flex flex-col items-center justify-around mt-25 rounded-lg bg-opacity-70 gap-y-10"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
