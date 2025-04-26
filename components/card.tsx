@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 export const Card = () => {
   return (
     <motion.div
-      className="flex flex-col items-center justify-around mt-25 rounded-lg bg-opacity-70 gap-y-10"
+      className="flex flex-col items-center justify-around mt-25 rounded-lg bg-opacity-70 gap-y-10 bg-red-300"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -48,7 +48,7 @@ export const Card = () => {
         <a
           href="https://www.github.com/JLeone123"
           target="_blank"
-          className="text-[1.75rem] border-[0.05rem] border-slate-50/90 rounded-full p-3
+          className="text-[2rem] border-[0.05rem] border-slate-50/90 rounded-full p-3
             hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
         >
           <FaGithubSquare />
@@ -56,7 +56,7 @@ export const Card = () => {
         <a
           href="https://www.linkedin.com/in/jamesleone1/"
           target="_blank"
-          className="text-[1.75rem] border-[0.05rem] border-slate-50/90 rounded-full p-3
+          className="text-[2rem] border-[0.05rem] border-slate-50/90 rounded-full p-3
             hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
         >
           <FaLinkedin />

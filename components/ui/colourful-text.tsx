@@ -25,7 +25,10 @@ export function ColourfulText({ words }: { words: string[] }) {
 
   // Every five seconds, randomize the color order
   // and increment the count by one.
+  const [shouldAnimate, setShouldAnimate] = React.useState(false);
+
   React.useEffect(() => {
+    const timeout = setTimeout(() => setShouldAnimate(true), 1250);
     const interval = setInterval(() => {
       const shuffled = [...colors].sort(() => Math.random() - 0.5);
       setCurrentColors(shuffled);
@@ -35,7 +38,10 @@ export function ColourfulText({ words }: { words: string[] }) {
       }
     }, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
   });
 
   return text.split("").map((char, index) => (
@@ -44,13 +50,17 @@ export function ColourfulText({ words }: { words: string[] }) {
       initial={{
         y: 0,
       }}
-      animate={{
-        color: currentColors[index % currentColors.length],
-        y: [0, -3, 0],
-        scale: [1, 1.01, 1],
-        filter: ["blur(0px)", `blur(5px)`, "blur(0px)"],
-        opacity: [1, 0.8, 1],
-      }}
+      animate={
+        shouldAnimate
+          ? {
+              color: currentColors[index % currentColors.length],
+              y: [0, -3, 0],
+              scale: [1, 1.01, 1],
+              filter: ["blur(0px)", `blur(5px)`, "blur(0px)"],
+              opacity: [1, 0.8, 1],
+            }
+          : {}
+      }
       transition={{
         duration: 0.5,
         delay: index * 0.05,

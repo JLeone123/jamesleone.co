@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaFacebookSquare, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { motion } from "motion/react";
 
 export const SideInfo = () => {
@@ -36,6 +36,13 @@ export const SideInfo = () => {
       <div className="flex flex-col items-center gap-y-5 my-0">
         <a
           href="https://www.github.com/JLeone123"
+          className="text-[2rem] border border-slate-50/30 rounded-full p-3 hover:bg-[#1877F2]
+          hover:scale-[1.07] active:scale-[1.07] focus:scale-[1.07] hover:outline-0 transition"
+        >
+          <FaFacebookSquare />
+        </a>
+        <a
+          href="https://www.github.com/JLeone123"
           className="text-[2rem] border border-slate-50/30 rounded-full p-3 hover:bg-gradient-to-r hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] 
           hover:scale-[1.07] active:scale-[1.07] focus:scale-[1.07] hover:outline-0 transition bg-[length:125%_125%] bg-[position:50%_50%]"
         >
@@ -43,17 +50,10 @@ export const SideInfo = () => {
         </a>
         <a
           href="https://www.github.com/JLeone123"
-          className="text-[2rem] border border-slate-50/30 rounded-full p-3 hover:bg-[#00acee] 
+          className="text-[2rem] border border-slate-50/30 rounded-full p-3 hover:bg-[#7289DA] 
           hover:scale-[1.07] active:scale-[1.07] focus:scale-[1.07] hover:outline-0 transition"
         >
-          <FaTwitter />
-        </a>
-        <a
-          href="https://www.github.com/JLeone123"
-          className="text-[2rem] border border-slate-50/30 rounded-full p-3 hover:bg-[#1877F2]
-          hover:scale-[1.07] active:scale-[1.07] focus:scale-[1.07] hover:outline-0 transition"
-        >
-          <FaFacebookSquare />
+          <FaDiscord />
         </a>
       </div>
     </motion.div>

@@ -15,7 +15,7 @@ import { motion } from "motion/react";
 export const Intro = () => {
   return (
     <motion.section
-      className="flex flex-col mt-25 justify-between items-center gap-y-5"
+      className="flex flex-col mt-25 justify-between gap-y-5 w-full"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -24,7 +24,7 @@ export const Intro = () => {
         delay: 0.75,
       }}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full">
         <h1 className="text-[3.75rem] text-slate-50 tracking-[0rem]">
           Hello, I'm <br />
           <span className="bg-linear-45 text-[4.5rem] from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">

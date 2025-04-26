@@ -8,10 +8,10 @@ export const links: Link[] = [
     name: "Home",
     hash: "#",
   },
-  {
-    name: "About",
-    hash: "#about",
-  },
+  // {
+  //   name: "About",
+  //   hash: "#about",
+  // },
   {
     name: "Experience",
     hash: "#experience",
