@@ -26,7 +26,7 @@ export const Intro = () => {
     >
       <div className="flex flex-col w-full">
         <h1 className="text-[3.75rem] text-slate-50 tracking-[0rem]">
-          Hello, I'm <br />
+          Hi, I'm <br />
           <span className="bg-linear-45 text-[4.5rem] from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
             James Leone
           </span>
