@@ -38,7 +38,7 @@ export const RotateText = () => {
               damping: 12,
             },
             opacity: {
-              duration: "0.3",
+              duration: 0.3,
             },
           }}
           className="text-[2.3rem] bg-linear-45 from-orange-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"
