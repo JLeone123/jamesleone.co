@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { links } from "@/lib/data";
-import Link from "next/link";
-import { motion } from "motion/react";
+// import { links } from "@/lib/data";
+// import Link from "next/link";
+// import { motion } from "motion/react";
 
 export const Header = () => {
   return (
