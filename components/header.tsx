@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export const Header = () => {
   return (
     <header className="z-100 relative flex justify-center w-full">
-      <motion.div
+      {/* <motion.div
         className="fixed max-md:w-full flex flex-row justify-center mt-3 backdrop-blur-[0.5rem]"
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export const Header = () => {
             })}
           </ul>
         </nav>
-      </motion.div>
+      </motion.div> */}
     </header>
   );
 };
