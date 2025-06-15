@@ -27,12 +27,43 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   /* background: var(--background); */
   background: #09090b;
   /* color: var(--foreground); */
   color: #ededed;
   /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 5em auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  width: 100%;
+}
+
+.col + .col {
+  margin-left: 3em;
 }
 
 .instagram-gradient {

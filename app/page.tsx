@@ -2,6 +2,7 @@
 // import leoneProfilePicture from "@/public/leone-profile-picture.png";
 // import Link from "next/link";
 import { Card } from "@/components/card";
+import ContactHeader from "@/components/contact-header";
 // import { Contact } from "@/components/contact";
 import { Intro } from "@/components/intro";
 import { SideInfo } from "@/components/side-info";
@@ -9,12 +10,13 @@ import { SideInfo } from "@/components/side-info";
 
 export default function Home() {
   return (
-    // <Spotlight>
-    <main className="flex flex-col items-center gap-y-10 mx-17">
-      <section className="relative flex flex-row gap-x-15 mt-7 max-h-[90vh]">
-        <Card />
-        <Intro />
-        <SideInfo />
+    <main className="main container row">
+      <Card />
+      <section className="border border-green-400 col">
+        <h1>hello</h1>
+      </section>
+      <section className="border border-blue-400 col">
+        <h1>hello</h1>
       </section>
     </main>
   );
