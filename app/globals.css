@@ -49,8 +49,8 @@ img {
 
 .container {
   width: 90%;
-  max-width: 1100px;
-  margin: 5em auto;
+  max-width: 1200px;
+  margin: 3em auto;
 }
 
 .row {
@@ -64,6 +64,10 @@ img {
 
 .col + .col {
   margin-left: 3em;
+}
+
+.social + .social {
+  margin-top: 0.5em;
 }
 
 .instagram-gradient {
