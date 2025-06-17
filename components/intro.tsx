@@ -16,20 +16,11 @@ export const Intro = () => {
         delay: 0.75,
       }}
     >
-      {/* <h1
-        // className="max-lg:text-[4vw] lg:text-[5vmin] text-slate-50 tracking-[0rem] mt-0"
-        className="text-[5vmin] text-slate-50 tracking-[0rem] mt-0"
-      >
-        Hi, I'm <br />{" "} */}
-      <h1
-        // className="max-lg:text-[4.2vw] lg:text-[6vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text"
-        className="max-lg:text-[4.2vw] lg:text-[7vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text"
-      >
+      <h1 className="max-lg:text-[4.2vw] lg:text-[7vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
         James Leone
       </h1>
-      {/* </h1> */}
+
       <h2 className="motto text-slate-50 max-lg:text-[3vw] lg:text-[5vmin]">
-        {/* Always excited about... <br /> */}
         <div className="colorful-text justify-center flex">
           <ColourfulText
             words={[

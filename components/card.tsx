@@ -3,9 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import leoneProfilePicture from "@/public/leone-profile-picture.png";
-// import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion } from "motion/react";
-import { BackgroundGradient } from "./ui/background-gradient";
 
 export const Card = () => {
   return (
@@ -28,41 +26,6 @@ export const Card = () => {
             priority={true}
             className="object-cover rounded-lg border-[0.05rem] max-lg:w-[100%] lg:w-[100%] border-black/90 shadow-xl"
           />
-          {/* <section className="flex flex-col w-[75%]">
-            <a
-              href="/leone-resume.pdf"
-              target="_blank"
-              className="resume text-[1.15em] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
-            hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
-            >
-              Resume
-            </a>
-            <a
-              href="mailto:jsalleo13@gmail.com"
-              className="resume text-[1.15em] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
-            hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
-            >
-              Email
-            </a>
-          </section> */}
-          {/* <section className="row mt-5 w-[55%]">
-            <a
-              href="https://www.github.com/JLeone123"
-              target="_blank"
-              className="text-[2vw] flex items-center justify-center border-[0.05rem] border-slate-50/90 rounded-full p-[1.2vw]
-            hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
-            >
-              <FaGithubSquare />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jamesleone1/"
-              target="_blank"
-              className="text-[2vw] border-[0.05rem] border-slate-50/90 rounded-full flex items-center justify-center p-[1.2vw]
-            hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
-            >
-              <FaLinkedin />
-            </a>
-          </section> */}
         </section>
       </section>
     </motion.div>
