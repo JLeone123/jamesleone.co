@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { FloatingNavbar } from "@/components/floating-navbar";
+import { Header } from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +26,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.className} antialiased`}>
-        <FloatingNavbar />
+        {/* <Header /> */}
+        <header>
+          <FloatingNavbar />
+        </header>
         {children}
       </body>
     </html>

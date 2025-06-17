@@ -17,7 +17,9 @@ export const Card = () => {
         delay: 0.75,
       }}
     >
-      <section className="card bg-zinc-700/10 py-4 px-3 rounded-lg">
+      {/* bg-slate-900/90 */}
+      <section className="relative card bg-zinc-700/10 py-4 px-3 rounded-lg">
+        {/* <section className="absolute bg-zinc-700/10 -z-[1] h-full w-full rotate-10 -translate-y-5 py-4 px-3 rounded-lg layered-card"></section> */}
         <section className="card-content row flex-col items-center">
           <Image
             src={leoneProfilePicture}
