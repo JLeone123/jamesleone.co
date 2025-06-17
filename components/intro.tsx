@@ -24,8 +24,8 @@ export const Intro = () => {
         <div className="colorful-text justify-center flex">
           <ColourfulText
             words={[
-              "Software Engineer",
-              "UI / UX Designer",
+              "Software engineer",
+              "UI / UX designer",
               "Philosopher ",
               "Lifelong learner",
             ]}

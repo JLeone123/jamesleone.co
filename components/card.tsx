@@ -17,7 +17,7 @@ export const Card = () => {
         delay: 0.75,
       }}
     >
-      <section className="card bg-zinc-700/10 backdrop-blur-xs py-4 px-3 rounded-lg">
+      <section className="card bg-zinc-700/10 py-4 px-3 rounded-lg">
         <section className="card-content row flex-col items-center">
           <Image
             src={leoneProfilePicture}

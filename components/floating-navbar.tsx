@@ -9,6 +9,8 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 
+import { motion } from "motion/react";
+
 export function FloatingNavbar() {
   const links = [
     {
@@ -45,8 +47,17 @@ export function FloatingNavbar() {
     },
   ];
   return (
-    <div className="flex mt-15 justify-center w-full">
-      <FloatingDock mobileClassName="" items={links} />
-    </div>
+    <motion.div
+      className="flex mt-15 fixed left-1/2 -translate-x-1/2"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "tween",
+        duration: 0.75,
+        delay: 0.75,
+      }}
+    >
+      <FloatingDock mobileClassName="translate-y-20" items={links} />
+    </motion.div>
   );
 }
