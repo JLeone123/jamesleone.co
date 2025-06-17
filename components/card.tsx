@@ -3,13 +3,14 @@
 import Image from "next/image";
 import React from "react";
 import leoneProfilePicture from "@/public/leone-profile-picture.png";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+// import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion } from "motion/react";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 export const Card = () => {
   return (
     <motion.div
-      className="col"
+      className="min-w-[250px] max-w-[300px] flex items-center"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -25,26 +26,26 @@ export const Card = () => {
             alt="Professional headshot of James Leone"
             quality={100}
             priority={true}
-            className="object-cover rounded-lg border-[0.05rem] max-lg:w-[75%] lg:w-[85%] border-black/90 shadow-xl"
+            className="object-cover rounded-lg border-[0.05rem] max-lg:w-[100%] lg:w-[100%] border-black/90 shadow-xl"
           />
-          <section className="flex flex-col w-[75%]">
+          {/* <section className="flex flex-col w-[75%]">
             <a
               href="/leone-resume.pdf"
               target="_blank"
-              className="resume text-[1.8vmin] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
+              className="resume text-[1.15em] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
             hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
             >
-              View resume
+              Resume
             </a>
             <a
               href="mailto:jsalleo13@gmail.com"
-              className="resume text-[1.8vmin] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
+              className="resume text-[1.15em] border-[0.05rem] border-slate-50/90 rounded-xl px-3 py-2 mt-5 text-gray-50 text-center
             hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
             >
               Email
             </a>
-          </section>
-          <section className="row mt-5 w-[55%]">
+          </section> */}
+          {/* <section className="row mt-5 w-[55%]">
             <a
               href="https://www.github.com/JLeone123"
               target="_blank"
@@ -61,7 +62,7 @@ export const Card = () => {
             >
               <FaLinkedin />
             </a>
-          </section>
+          </section> */}
         </section>
       </section>
     </motion.div>

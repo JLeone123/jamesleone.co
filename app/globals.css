@@ -20,7 +20,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #09090b;
+    /* --background: #09090b; */
+    --background: #020618;
     /* --background: radial-gradient(ellipse at bottom, #040b25 0%, #020617 100%); */
     /* --background: radial-gradient(ellipse at bottom, #101c2a 0%, #020617 100%); */
     --foreground: #ededed;
@@ -35,12 +36,14 @@
 
 body {
   /* background: var(--background); */
-  background: #09090b;
+  background: #020618;
   /* color: var(--foreground); */
   color: #ededed;
   /* font-family: Arial, Helvetica, sans-serif; */
   margin: 0;
   font-size: 16px;
+  height: 100vh;
+  /* border: 1px solid lightblue; */
 }
 
 img {
