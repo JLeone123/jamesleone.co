@@ -55,7 +55,7 @@ export const SideInfo = () => {
               href="https://www.github.com/JLeone123"
               target="_blank"
               className="text-[4vw] text-slate-300 flex items-center justify-center rounded-full p-[1.2vw]
-              hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
+              hover:scale-[1.15] focus:scale-[1.15] focus:outline-0 active:scale-[1.10] transition"
             >
               <FaGithubSquare />
             </a>
@@ -63,7 +63,7 @@ export const SideInfo = () => {
               href="https://www.linkedin.com/in/jamesleone1/"
               target="_blank"
               className="text-[4vw] text-slate-300 flex items-center justify-center p-[1.2vw]
-              hover:scale-[1.15] focus:scale-[1.15] hover:outline-0 active:scale-[1.10] transition"
+              hover:scale-[1.15] focus:scale-[1.15] focus:outline-0 active:scale-[1.10] transition"
             >
               <FaLinkedin />
             </a>
@@ -74,22 +74,21 @@ export const SideInfo = () => {
               target="_blank"
               //   className="resume text-[1.15em] flex items-center text-center border border-red-400 gap-2 cursor-pointer outline-none border-slate-50/90
               // hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
-              className="resume text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer
-              hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
+              className="group resume text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
               <section className="wrapper flex items-center w-[50%] justify-between mx-auto">
-                Resume <FaRegPaperPlane />
+                Resume{" "}
+                <FaRegPaperPlane className="group-hover:-translate-y-1 group-hover:translate-x-1 group-focus:-translate-y-1 group-focus:translate-x-1 transition" />
               </section>
             </a>
             <a
               href="https://www.linkedin.com/in/jamesleone1/"
               target="_blank"
-              className="mail text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer
-              hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
+              className="group mail text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
               <section className="wrapper flex items-center w-[50%] justify-between mx-auto">
                 Email
-                <MdEmail />
+                <MdEmail className="group-hover:-translate-y-1 group-focus:-translate-y-1 hover:outline-none transition" />
               </section>
             </a>
           </section>

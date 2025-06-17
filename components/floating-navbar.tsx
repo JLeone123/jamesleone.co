@@ -31,10 +31,7 @@ export function FloatingNavbar() {
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub
-          className="h-full w-full text-green-400 dark:text-green-400"
-          target="_blank"
-        />
+        <IconBrandGithub className="h-full w-full text-green-400 dark:text-green-400" />
       ),
       href: "https://www.github.com/JLeone123",
     },
