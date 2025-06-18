@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className="z-100 relative flex justify-center w-full">
       <motion.div
-        className="fixed max-md:w-full flex flex-row justify-center mt-3 backdrop-blur-[0.5rem]"
+        className="fixed max-md:w-full flex flex-row justify-center backdrop-blur-[0.5rem]"
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

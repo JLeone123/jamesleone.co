@@ -12,7 +12,7 @@ export default function Home() {
     <section className="flex justify-center items-center h-full">
       <main className="main container flex flex-col gap-y-15">
         <Spotlight />
-        <section className="col flex gap-x-5">
+        <section className="col flex gap-x-5 mt-[3vw]">
           <Card />
           <Intro />
           <SideInfo />

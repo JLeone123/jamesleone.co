@@ -18,7 +18,7 @@ import { motion } from "motion/react";
 export const SideInfo = () => {
   return (
     <motion.section
-      className="max-lg:hidden flex flex-col justify-between items-center"
+      className="w-[45%] max-lg:hidden flex flex-col justify-between items-center"
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -68,15 +68,15 @@ export const SideInfo = () => {
               <FaLinkedin />
             </a>
           </section>
-          <section className="second-icons flex flex-col w-[90%] mx-auto mt-10 gap-y-10">
+          <section className="second-icons flex flex-col w-[70%] mx-auto mt-10 gap-y-10">
             <a
               href="/leone-resume.pdf"
               target="_blank"
               //   className="resume text-[1.15em] flex items-center text-center border border-red-400 gap-2 cursor-pointer outline-none border-slate-50/90
               // hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] transition"
-              className="group resume text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
+              className="group resume text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
-              <section className="wrapper flex items-center w-[50%] justify-between mx-auto">
+              <section className="wrapper flex items-center w-[80%] justify-between mx-auto">
                 Resume{" "}
                 <FaRegPaperPlane className="group-hover:-translate-y-1 group-hover:translate-x-1 group-focus:-translate-y-1 group-focus:translate-x-1 transition" />
               </section>
@@ -84,9 +84,9 @@ export const SideInfo = () => {
             <a
               href="https://www.linkedin.com/in/jamesleone1/"
               target="_blank"
-              className="group mail text-[1.15em] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-10 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
+              className="group mail text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
-              <section className="wrapper flex items-center w-[50%] justify-between mx-auto">
+              <section className="wrapper flex items-center w-[80%] justify-between mx-auto">
                 Email
                 <MdEmail className="group-hover:-translate-y-1 group-focus:-translate-y-1 hover:outline-none transition" />
               </section>

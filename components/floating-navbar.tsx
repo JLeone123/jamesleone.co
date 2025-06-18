@@ -44,8 +44,8 @@ export function FloatingNavbar() {
     },
   ];
   return (
-    <motion.nav
-      className="flex mt-15 fixed left-1/2 -translate-x-1/2"
+    <motion.header
+      className="mt-[7vh] flex fixed left-1/2 -translate-x-1/2"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -55,6 +55,6 @@ export function FloatingNavbar() {
       }}
     >
       <FloatingDock mobileClassName="translate-y-20" items={links} />
-    </motion.nav>
+    </motion.header>
   );
 }

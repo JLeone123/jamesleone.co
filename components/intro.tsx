@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export const Intro = () => {
   return (
     <motion.section
-      className="flex flex-col text-center px-3 justify-between"
+      className="w-[80%] flex flex-col text-center px-3 gap-5 self-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -16,7 +16,7 @@ export const Intro = () => {
         delay: 0.75,
       }}
     >
-      <h1 className="max-lg:text-[4.2vw] lg:text-[7vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
+      <h1 className="max-lg:text-[4.2vw] lg:text-[5.5vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
         James Leone
       </h1>
 
@@ -36,7 +36,7 @@ export const Intro = () => {
           <span>⛰️</span> */}
         </div>
       </h2>
-      <h4 className="text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em]">
+      <h4 className="md:text-[1.1em] lg:text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em]">
         I'm a software engineer with one year of professional work experience.
         When I'm not writing code, I enjoy building full-stack applications,
         exercising, reading philosophy, and connecting with other passionate
