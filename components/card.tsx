@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 export const Card = () => {
   return (
     <motion.div
-      className="w-[45%] flex items-center"
+      className="card"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
@@ -17,18 +17,14 @@ export const Card = () => {
         delay: 0.75,
       }}
     >
-      {/* bg-gray-900/90 */}
-      <section className="card-content row flex-col items-center relative card bg-zinc-700/10 py-4 px-3 rounded-lg">
-        {/* <section className="absolute bg-zinc-700/10 -z-[1] h-full w-full rotate-10 -translate-y-5 py-4 px-3 rounded-lg layered-card"></section> */}
-        {/* <section className=""> */}
+      <section className="card__content">
         <Image
           src={leoneProfilePicture}
           alt="Professional headshot of James Leone"
           quality={100}
           priority={true}
-          className="object-cover rounded-lg border-[0.05rem] max-lg:w-[100%] lg:w-[100%] border-black/90 shadow-xl"
+          className="card__image"
         />
-        {/* </section> */}
       </section>
     </motion.div>
   );

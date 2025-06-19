@@ -4,6 +4,10 @@ type Link = {
   color: string;
 };
 
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaRegPaperPlane } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export const links: Link[] = [
   {
     name: "Home",
@@ -21,3 +25,5 @@ export const links: Link[] = [
     color: "text-cyan-400",
   },
 ] as const;
+
+export { FaGithubSquare, FaLinkedin, FaRegPaperPlane, MdEmail };

@@ -45,7 +45,7 @@ export function FloatingNavbar() {
   ];
   return (
     <motion.header
-      className="mt-[7vh] flex fixed left-1/2 -translate-x-1/2"
+      className="flex fixed md:left-1/2 md:-translate-x-1/2 mt-[2.5vh]"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

@@ -3,11 +3,12 @@
 import React from "react";
 import { ColourfulText } from "./ui/colourful-text";
 import { motion } from "motion/react";
+import { IntroText } from "./intro-text";
 
 export const Intro = () => {
   return (
     <motion.section
-      className="w-[80%] flex flex-col text-center px-3 gap-5 self-center"
+      className="intro"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -16,33 +17,19 @@ export const Intro = () => {
         delay: 0.75,
       }}
     >
-      <h1 className="max-lg:text-[4.2vw] lg:text-[5.5vmin] bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text">
-        James Leone
-      </h1>
+      <h1 className="intro__name">James Leone</h1>
 
-      <h2 className="motto text-slate-50 max-lg:text-[3vw] lg:text-[5vmin]">
-        <div className="colorful-text justify-center flex">
-          <ColourfulText
-            words={[
-              "Software engineer",
-              "UI / UX designer",
-              "Philosopher ",
-              "Lifelong learner",
-            ]}
-          />
-          {/* <span>💻</span>
-          <span>🎨</span>
-          <span>💭</span>
-          <span>⛰️</span> */}
-        </div>
-      </h2>
-      <h4 className="md:text-[1.1em] lg:text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em]">
-        I'm a software engineer with one year of professional work experience.
-        When I'm not writing code, I enjoy building full-stack applications,
-        exercising, reading philosophy, and connecting with other passionate
-        creators. I am currently looking for a software developer role where I
-        can gain new skills and generate positive impact.
-      </h4>
+      <ColourfulText
+        words={[
+          "Software engineer",
+          "UI / UX designer",
+          "Cloud enthusiast",
+          "Philosopher",
+          "Lifelong learner",
+        ]}
+      />
+
+      <IntroText />
     </motion.section>
   );
 };
