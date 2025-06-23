@@ -14,7 +14,10 @@ export const ContactButton = () => {
         delay: 0.85,
       }}
     >
-      <Link href="#contact" className="contact-button__link">
+      <Link
+        href="https://linkedin.com/in/jamesleone1"
+        className="contact-button__link"
+      >
         Let's connect!
       </Link>
     </motion.section>

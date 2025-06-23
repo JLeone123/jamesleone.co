@@ -53,7 +53,7 @@ export const SideInfo = () => {
             <a
               href="/leone-resume.pdf"
               target="_blank"
-              className="group resume text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
+              className="group resume text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-full px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
               <section className="wrapper flex items-center w-[80%] justify-between mx-auto">
                 Resume <FaRegPaperPlane className="paper-plane-icon" />
@@ -62,7 +62,7 @@ export const SideInfo = () => {
             <a
               href="https://www.linkedin.com/in/jamesleone1/"
               target="_blank"
-              className="group mail text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-xl px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
+              className="group mail text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-full px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
               <section className="wrapper flex items-center w-[80%] justify-between mx-auto">
                 Email <MdEmail className="email-icon" />

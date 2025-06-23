@@ -96,13 +96,13 @@ img {
   @apply md:flex md:items-center max-md:order-2;
 }
 
-.card__content {
+/* .card__content {
   @apply flex-col items-center relative bg-zinc-700/10 py-3 px-2.25 md:py-4 md:px-3 rounded-lg;
 }
 
 .card__image {
   @apply rounded-lg border-[0.05rem] md:w-[100%] border-black/90 shadow-xl;
-}
+} */
 
 .background-card {
   /* Styles for the horizontal card beneath the main card */
@@ -154,7 +154,7 @@ img {
 }
 
 .contact-button__link {
-  @apply hidden sm:block focus:outline-0 border-2 bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-7 py-3 rounded-lg
+  @apply hidden sm:block text-lg focus:outline-0 border-2 bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-7 py-3 rounded-full
           hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition;
 }
 
