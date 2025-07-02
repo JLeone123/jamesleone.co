@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import { FloatingNavbar } from "@/components/floating-navbar";
-import { Spotlight } from "@/lib/components";
-// import { Header } from "@/components/header";
+import { Header } from "@/components/header";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +12,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "James Leone",
   description:
-    "James Leone is a software engineer who enjoys building websites and full-stack applications.",
+    "James Leone is a software engineer with a Bachelor of Science in Computer Science from UMass Amherst. He is passionate about full-stack development and cloud computing. He is currently working toward his AWS Certified Cloud Practitioner.",
 };
 
 export default function RootLayout({
@@ -22,14 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.className} antialiased`}>
-        <Spotlight />
-        <FloatingNavbar />
+        <Header />
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );

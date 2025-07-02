@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 import {
   FaGithubSquare,
   FaLinkedin,
@@ -11,18 +11,18 @@ import {
 
 export const SideInfo = () => {
   return (
-    <motion.section
-      className="max-md:border-3 w-[45%] max-lg:hidden flex flex-col justify-between items-center"
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        type: "tween",
-        duration: 0.75,
-        delay: 0.75,
-      }}
+    <section
+      className="w-[45%] flex flex-col justify-between"
+      // initial={{ opacity: 0, x: 50 }}
+      // animate={{ opacity: 1, x: 0 }}
+      // transition={{
+      //   type: "tween",
+      //   duration: 0.75,
+      //   delay: 0.75,
+      // }}
     >
-      <section className="flex flex-col justify-center">
-        <section className="flex text-center flex-col mx-auto max-w-[90%] mt-5">
+      <section className="flex flex-col">
+        <section className="flex text-center flex-col mx-auto max-w-[90%]">
           <p className="italic text-slate-300 max-lg:text-[4vmin] lg:text-[4.25vmin]">
             Designing your ideas,{" "}
             <span className="px-1 bg-linear-45 from-aceternity-pink via-aceternity-red to-aceternity-orange font-bold max-lg:text-[4.25vw] lg:text-[4.5vmin]">
@@ -71,6 +71,6 @@ export const SideInfo = () => {
           </section>
         </section>
       </section>
-    </motion.section>
+    </section>
   );
 };
