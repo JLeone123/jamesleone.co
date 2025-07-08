@@ -41,7 +41,7 @@ export const RotateText = () => {
               duration: 0.3,
             },
           }}
-          className="text-[2.3rem] bg-linear-45 from-orange-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"
+          className="bg-linear-45 from-orange-400 via-purple-400 to-pink-400 text-transparent bg-clip-text"
         >
           {phrases[index]}
         </motion.span>

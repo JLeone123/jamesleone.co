@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
+// import { Header } from "@/components/header";
 import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
@@ -26,7 +26,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.className} antialiased`}>
-        <Header />
+        {/* <Header /> */}
         {children}
         <Toaster position="top-center" />
       </body>

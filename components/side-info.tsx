@@ -1,7 +1,4 @@
-// "use client";
-
 import React from "react";
-// import { motion } from "motion/react";
 import {
   FaGithubSquare,
   FaLinkedin,
@@ -11,16 +8,7 @@ import {
 
 export const SideInfo = () => {
   return (
-    <section
-      className="w-[45%] flex flex-col justify-between"
-      // initial={{ opacity: 0, x: 50 }}
-      // animate={{ opacity: 1, x: 0 }}
-      // transition={{
-      //   type: "tween",
-      //   duration: 0.75,
-      //   delay: 0.75,
-      // }}
-    >
+    <section className="w-[45%] bg-red-400 flex flex-col justify-between">
       <section className="flex flex-col">
         <section className="flex text-center flex-col mx-auto max-w-[90%]">
           <p className="italic text-slate-300 max-lg:text-[4vmin] lg:text-[4.25vmin]">

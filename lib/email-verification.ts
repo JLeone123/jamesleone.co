@@ -26,6 +26,7 @@ export const emailVerification = async (email: string): Promise<boolean> => {
     }
 
     const value = await emailable.verify(email, { apiKey });
+    console.log(value);
 
     if (
       (value &&

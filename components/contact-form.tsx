@@ -12,17 +12,20 @@ export const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="contact h-[100svh] flex flex-col justify-center items-center max-w-[56rem]"
+      className="contact flex flex-col justify-center items-center mb-[3em]"
+      // className="contact h-[100svh] flex flex-col justify-center items-center"
     >
       <h2 className="contact__header text-center text-zinc-200 mb-2">
         Let's connect.
       </h2>
       <p className="contact__subheader text-slate-300 mb-10 text-center">
         Please feel free to contact me below or at{" "}
-        <span className="underline">jsalleo13@gmail.com</span>
+        <span className="underline underline-offset-4">
+          jsalleo13@gmail.com
+        </span>
       </p>
       <form
-        className="flex flex-col w-[100%] max-w-[56rem]"
+        className="flex flex-col w-full"
         action={async (formData) => {
           const { data, error } = await sendForm(formData);
 
@@ -71,7 +74,7 @@ export const ContactForm = () => {
           maxLength={500}
           required
         />
-        <label htmlFor="message" className="text-[1em] mb-2 rounded-lg">
+        <label htmlFor="message" className="text-[1em] mb-3 rounded-lg">
           <span className="form__label flex gap-x-2 leading-none text-slate-300">
             Message <LuMessageCircleMore className="text-slate-300" />
           </span>
@@ -86,7 +89,7 @@ export const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="form__button self-start flex items-center justify-center bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-9 py-3 rounded-full w-[25%]"
+          className="form__button self-start flex items-center justify-center bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
         >
           Submit
         </button>

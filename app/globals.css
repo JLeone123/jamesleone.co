@@ -40,9 +40,9 @@ text-[#2a89d2]
   box-sizing: border-box;
 }
 
-/* html { */
-/* height: 100%; */
-/* } */
+/* html {
+  height: 100%;
+} */
 
 body {
   /* background: #020618; */
@@ -96,19 +96,25 @@ img {
 
 /****  Home styles ****/
 
-/* .home {
-  height: 100%;
-  @apply mt-[5em];
-} */
+.home {
+  /* height: 100%; */
+  /* @apply mt-[5em]; */
+  /* @apply scroll-mt-[100rem] flex flex-col justify-center; */
+  @apply flex flex-col justify-center items-center;
+  @apply scroll-mt-[100rem];
+  @apply mt-[5em] mb-[15em];
+}
 
 /**** Main styles ****/
 .main {
-  @apply flex flex-col justify-center items-center;
+  /* @apply flex flex-col justify-center items-center; */
+  @apply flex flex-col items-center;
 }
 
 /**** Hero styles ****/
 .hero {
-  @apply flex gap-x-5;
+  /* @apply flex gap-x-5; */
+  @apply flex;
 }
 
 /**** Card styles ****/
@@ -146,7 +152,8 @@ img {
 .intro {
   /* Padding, centering the text, and 
   applying a flexible width */
-  @apply px-3 gap-5 text-center w-[80%];
+  /* @apply px-3 gap-5 text-center w-[80%]; */
+  @apply text-center w-[80%];
 
   /* Make the intro a flex-container 
   with the direction of items being a column */
@@ -159,65 +166,85 @@ img {
   /* Text-resizing */
   /* leaving the line-heading the same - this is why the
   text is slightly lower than the starting line height of its flex neighbors */
-  @apply text-[9vmin] md:text-[7vmin];
+  font-size: calc(0.75vw + 2.7em);
   /* Apply gradient */
   @apply bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text;
+  @apply mb-1;
+  @apply text-center;
 }
 
 .contact__header {
   /* @apply bg-linear-45 from-green-300 via-green-400 to-green-500 text-transparent bg-clip-text; */
   /* @apply bg-linear-45 from-purple-300 via-pink-400 to-red-400 text-transparent bg-clip-text; */
   /* @apply bg-linear-45 from-emerald-400 via-teal-500 to-cyan-500 text-transparent bg-clip-text; */
-  @apply sm:text-[3em];
   font-size: calc(0.75vw + 2.7em);
+  @apply sm:text-[3em];
   @apply bg-linear-45 from-teal-400 via-cyan-500 to-sky-500 text-transparent bg-clip-text;
 }
 
 .contact__subheader {
-  @apply sm:text-[1.25em];
   font-size: calc(0.75vw + 0.95em);
+  @apply sm:text-[1.25em];
 }
 
 .form__label {
-  @apply sm:text-[1em];
+  /* small screen size media query */
   font-size: calc(0.75vw + 0.7em);
+  /* medium screen size media query */
+  @apply sm:text-[1em];
+  /* large screen size media query */
+  /* font-size: calc(0.1vw + 0.1em); */
 }
 
 .form__input {
+  font-size: calc(0.75vw + 0.7em);
   @apply sm:text-[1em];
   @apply focus:outline-2 focus:outline-zinc-200;
-  font-size: calc(0.75vw + 0.7em);
 }
 
 .form__button {
-  @apply sm:text-[1.1em] outline-2 outline-zinc-200/20;
-  font-size: calc(1vw + 0.7em);
+  font-size: calc(1vw + 0.55em);
+  @apply sm:text-[0.85em] outline-2 outline-zinc-200/20;
   @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02] transition;
 }
 
 .intro__text {
-  @apply md:text-[1.1em] lg:text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em];
+  @apply text-center text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em];
 }
 
 .intro__colorful-text {
   /* Text-resizing */
-  @apply text-[7vmin] md:text-[5.75vmin] lg:text-[5vmin];
+  /* @apply text-[7vmin]; */
+  font-size: calc(1vw + 1.8em);
+  @apply sm:text-[5.5vmin];
   /* Default color when first loading onto the screen */
   @apply text-slate-50;
+  @apply mb-8;
 }
 
 /**** Button styles ****/
 
 /* Button is still off center */
-.contact-button__container {
-  /* @apply flex flex-col items-center; */
+/* .contact-button__container {
+  // @apply flex flex-col items-center;
   @apply inline-block;
   @apply mx-auto;
-}
+} */
 
 .contact-button__link {
-  @apply hidden sm:block text-lg focus:outline-0 border-2 bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-20 py-4 rounded-full
-          hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition;
+  /* apply flex item rule */
+  @apply self-center;
+
+  /* Apply font-styles */
+  font-size: calc(1vw + 0.5em);
+  @apply px-5 py-2 mt-6 bg-zinc-100 text-[0.85em] text-zinc-800/90;
+  /* apply border styles */
+  @apply outline-2 outline-zinc-200/20 border-zinc-200/20 rounded-full;
+
+  /* apply interactive animations */
+  @apply focus:outline-2 hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition;
+
+  /* @apply sm:text-[0.85em] outline-2 outline-zinc-200/20; */
 }
 
 /**** Side info styles ****/
@@ -230,4 +257,10 @@ img {
 
 .email-icon {
   @apply group-hover:-translate-y-1 group-focus:-translate-y-1 hover:outline-none transition;
+}
+
+.email,
+.resume {
+  font-size: calc(1vw + 0.75em);
+  @apply w-full;
 }
