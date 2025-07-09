@@ -105,6 +105,10 @@ img {
   @apply mt-[5em] mb-[15em];
 }
 
+.projects {
+  @apply mb-[15em];
+}
+
 /**** Main styles ****/
 .main {
   /* @apply flex flex-col justify-center items-center; */
@@ -171,6 +175,12 @@ img {
   @apply bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text;
   @apply mb-1;
   @apply text-center;
+}
+
+.projects__heading {
+  font-size: calc(0.75vw + 2.7em);
+  @apply sm:text-[3em];
+  @apply bg-linear-45 from-teal-400 via-cyan-500 to-sky-500 text-transparent bg-clip-text;
 }
 
 .contact__header {

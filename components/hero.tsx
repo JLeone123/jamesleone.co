@@ -1,20 +1,17 @@
-import React from "react";
-// import { Card } from "./card";
-// import { Intro } from "./intro";
-// import { SideInfo } from "./side-info";
-import { ContactButton } from "./contact-button";
-import leoneProfilePicture from "@/public/leone-profile-picture.png";
+import {
+  FaGithubSquare,
+  FaLinkedin,
+  FaRegPaperPlane,
+  MdEmail,
+  leoneProfilePicture,
+} from "@/lib/data";
+import { ContactButton, ColourfulText, IntroText } from "@/lib/components";
 import Image from "next/image";
-import { MdEmail } from "react-icons/md";
-import { FaGithubSquare, FaLinkedin, FaRegPaperPlane } from "react-icons/fa";
 import Link from "next/link";
-import { ColourfulText } from "./ui/colourful-text";
-import { IntroText } from "./intro-text";
 
 const Home = () => {
   return (
     <section id="home" className="home">
-      {/* <section className="hero"> */}
       <h1 className="intro__name">James Leone</h1>
       <ColourfulText
         words={[
@@ -35,7 +32,6 @@ const Home = () => {
       />
       <IntroText />
       {/* buttons */}
-      {/* <section className="flex mt-5 w-[100%] flex-col"> */}
       <section className="display sm:hidden buttons flex flex-col gap-y-5">
         <section className="first-icons flex gap-x-5 mt-[4em] justify-center">
           <Link
@@ -77,10 +73,6 @@ const Home = () => {
         </section>
         <ContactButton />
       </section>
-      {/* </section> */}
-      {/* <Intro /> */}
-      {/* <SideInfo /> */}
-      {/* </section> */}
     </section>
   );
 };

@@ -3,9 +3,13 @@ type Link = {
   hash: string;
 };
 
+// icons
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+
+// profile picture
+import leoneProfilePicture from "@/public/leone-profile-picture.png";
 
 export const links: Link[] = [
   {
@@ -22,4 +26,10 @@ export const links: Link[] = [
   },
 ] as const;
 
-export { FaGithubSquare, FaLinkedin, FaRegPaperPlane, MdEmail };
+export {
+  FaGithubSquare,
+  FaLinkedin,
+  FaRegPaperPlane,
+  MdEmail,
+  leoneProfilePicture,
+};
