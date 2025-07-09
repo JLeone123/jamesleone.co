@@ -13,7 +13,6 @@ export const ContactForm = () => {
     <section
       id="contact"
       className="contact flex flex-col justify-center items-center mb-[3em]"
-      // className="contact h-[100svh] flex flex-col justify-center items-center"
     >
       <h2 className="contact__header text-center text-zinc-200 mb-2">
         Let's connect.
@@ -52,6 +51,7 @@ export const ContactForm = () => {
           name="email"
           type="email"
           className="form__input border border-zinc-200 pl-2 py-2 rounded-lg mb-4"
+          autoComplete="on"
           placeholder="you@email.com"
           maxLength={500}
           required
@@ -70,6 +70,7 @@ export const ContactForm = () => {
           name="subject"
           type="text"
           className="form__input border border-zinc-200 pl-2 py-2 rounded-lg mb-4"
+          autoComplete="on"
           placeholder="Subject of your message..."
           maxLength={500}
           required
@@ -84,6 +85,7 @@ export const ContactForm = () => {
           name="message"
           className="form__input pl-2 py-2 border border-zinc-200 rounded-lg h-40 w-[full] mb-5"
           placeholder="Your message..."
+          autoComplete="on"
           maxLength={1000}
           required
         ></textarea>

@@ -1,22 +1,10 @@
-// "use client";
-
 import React from "react";
 import { ColourfulText } from "./ui/colourful-text";
-// import { motion } from "motion/react";
 import { IntroText } from "./intro-text";
 
 export const Intro = () => {
   return (
-    <section
-      className="intro"
-      // initial={{ opacity: 0, y: 50 }}
-      // animate={{ opacity: 1, y: 0 }}
-      // transition={{
-      //   type: "tween",
-      //   duration: 0.75,
-      //   delay: 0.75,
-      // }}
-    >
+    <section className="intro">
       <h1 className="intro__name">James Leone</h1>
 
       <ColourfulText

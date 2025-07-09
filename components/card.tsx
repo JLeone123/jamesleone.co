@@ -1,9 +1,6 @@
-// "use client";
-
 import React from "react";
 import Image from "next/image";
 import leoneProfilePicture from "@/public/leone-profile-picture.png";
-// import { motion } from "motion/react";
 
 export const Card = () => {
   return (
