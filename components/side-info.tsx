@@ -48,8 +48,7 @@ export const SideInfo = () => {
               </section>
             </a>
             <a
-              href="https://www.linkedin.com/in/jamesleone1/"
-              target="_blank"
+              href="mailto:jsalleo13@gmail.com"
               className="group mail text-[1.85vmin] flex justify-center items-center border-1 border-zinc-50 gap-3 rounded-full px-7 py-3 text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
             >
               <section className="wrapper flex items-center w-[80%] justify-between mx-auto">

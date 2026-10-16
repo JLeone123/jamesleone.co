@@ -24,7 +24,7 @@ const Home = () => {
       />
       <Image
         src={leoneProfilePicture}
-        className="border border-zinc-200/80 w-[clamp(8.5rem,40vw,13rem)] lg:w-[15.5rem] object-top self-center rounded-full object-cover aspect-square hover:scale-[1.10] active:scale-[1.10] transition"
+        className="border border-zinc-200/80 w-[min(45%,15rem)] md:w-[clamp(10rem,18vw,13rem)] object-top self-center rounded-full object-cover aspect-square hover:scale-[1.10] active:scale-[1.10] transition"
         decoding="async"
         alt="Professional headshot of James Leone"
         quality={100}
@@ -65,8 +65,7 @@ const Home = () => {
             </section>
           </a>
           <a
-            href="https://www.linkedin.com/in/jamesleone1/"
-            target="_blank"
+            href="mailto:jsalleo13@gmail.com"
             className="group email flex justify-center items-center border-1 border-zinc-50 rounded-full text-center cursor-pointer hover:scale-[1.07] focus:scale-[1.07] hover:outline-0 active:scale-[1.04] focus:outline-0 transition"
           >
             <section className="wrapper px-[1.25em] py-[0.6em] gap-x-2 flex items-center justify-between">

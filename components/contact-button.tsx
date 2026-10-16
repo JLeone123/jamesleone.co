@@ -5,7 +5,7 @@ export const ContactButton = () => {
   return (
     <Link
       className="contact-button__link"
-      href="https://linkedin.com/in/jamesleone1"
+      href="https://www.linkedin.com/in/jamesleone1/"
     >
       Let's connect!
     </Link>
