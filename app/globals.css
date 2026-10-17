@@ -282,6 +282,15 @@ img {
   @apply mb-8;
 }
 
+/* Phones in landscape (wide but short): the sm: 5.5vmin size is based on the
+   short side, so it came out tiny. Size off the width instead, kept below the
+   title (.intro__name = clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem)) at every width. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .intro__colorful-text {
+    font-size: clamp(1.75rem, 1rem + 2.5vw, 2.5rem);
+  }
+}
+
 /**** Button styles ****/
 
 /* Button is still off center */
