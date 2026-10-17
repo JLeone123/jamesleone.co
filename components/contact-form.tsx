@@ -12,7 +12,7 @@ export const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="contact flex flex-col justify-center items-center mb-[3em]"
+      className="contact flex flex-col justify-center items-center mb-[3em] scroll-mt-[3rem]"
     >
       <h2 className="contact__header text-center text-zinc-200 mb-2">
         Let's connect.

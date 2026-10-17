@@ -150,6 +150,36 @@ img {
   @apply mt-[5em] mb-[15em];
 }
 
+/* Image, intro text and buttons. Stacked on mobile. On medium and larger
+   screens: image and buttons side by side, centered, with the text below */
+.home__body {
+  @apply flex flex-col items-center w-full;
+  @apply md:flex-row md:flex-wrap md:justify-center md:items-center;
+  @apply md:gap-x-[clamp(2.5rem,6vw,5rem)] md:gap-y-[1.25rem];
+}
+
+/* md+ order: image, buttons, a line break, then the text on its own row.
+   (The break is needed: with its narrower max-width the text would otherwise
+   fit beside the buttons on wide screens.) */
+.home__body .home__buttons {
+  @apply md:order-1;
+}
+
+.home__break {
+  @apply hidden md:block md:order-2 md:basis-full md:h-0;
+}
+
+.home__body .intro__text {
+  /* Narrower on md+ (max 36rem, i.e. 576px), centered under the image and buttons */
+  @apply md:order-3 md:max-w-[36rem];
+}
+
+.home__buttons {
+  @apply flex flex-col items-center gap-y-5 mt-[4em];
+  /* md+: a column to the right of the image, pills the same width */
+  @apply md:mt-0 md:items-stretch;
+}
+
 .projects {
   @apply mb-[15em];
 }
@@ -267,7 +297,7 @@ img {
 }
 
 .intro__text {
-  @apply text-center text-[1.25em] w-full max-w-222 text-ink-muted mt-[2em];
+  @apply text-center text-[1.25em] w-full max-w-222 text-ink-muted mt-[2em] md:mt-0;
 }
 
 .intro__colorful-text {
@@ -307,7 +337,7 @@ img {
   /* Fluid font size: grows with the viewport but is capped on large screens */
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
   /* em-based padding so the pill scales with its text */
-  @apply px-[1.25em] py-[0.6em] mt-6 md:mt-0 bg-pill text-pill-ink border-1 border-transparent;
+  @apply px-[1.25em] py-[0.6em] mt-[2.75rem] md:mt-[3.5rem] bg-pill text-pill-ink border-1 border-transparent;
   /* apply border styles */
   @apply outline-2 outline-line/20 rounded-full whitespace-nowrap;
 
@@ -331,7 +361,7 @@ img {
 .resume {
   /* Same fluid size as the "Let's connect!" button so the pills match */
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
-  @apply w-full md:w-auto whitespace-nowrap;
+  @apply w-full whitespace-nowrap;
 }
 
 /* GitHub / LinkedIn icon links on the home section */
