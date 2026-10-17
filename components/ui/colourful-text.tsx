@@ -35,32 +35,47 @@ export function ColourfulText({ words }: { words: string[] }) {
 
   return (
     <h2 className="intro__colorful-text">
-      {text.split("").map((char, index) => (
-        <motion.span
-          key={`${char}-${count}-${index}`}
-          initial={{
-            y: 0,
-          }}
-          animate={
-            shouldAnimate
-              ? {
-                  color: currentColors[index % currentColors.length],
-                  y: [0, -3, 0],
-                  scale: [1, 1.01, 1],
-                  filter: ["blur(0px)", `blur(5px)`, "blur(0px)"],
-                  opacity: [1, 0.8, 1],
-                }
-              : {}
-          }
-          transition={{
-            duration: 0.5,
-            delay: index * 0.05,
-          }}
-          className="inline-block whitespace-pre font-sans tracking-tight"
-        >
-          {char}
-        </motion.span>
-      ))}
+      {(() => {
+        // Keep a running letter index so the stagger delay flows across words
+        let index = 0;
+        return text.split(" ").map((word, wordIndex, all) => (
+          <React.Fragment key={`${word}-${count}-${wordIndex}`}>
+            {/* Each word is unbreakable, so wrapping only happens between words */}
+            <span className="inline-block whitespace-nowrap">
+              {word.split("").map((char) => {
+                const i = index++;
+                return (
+                  <motion.span
+                    key={`${char}-${count}-${i}`}
+                    initial={{
+                      y: 0,
+                    }}
+                    animate={
+                      shouldAnimate
+                        ? {
+                            color: currentColors[i % currentColors.length],
+                            y: [0, -3, 0],
+                            scale: [1, 1.01, 1],
+                            filter: ["blur(0px)", `blur(5px)`, "blur(0px)"],
+                            opacity: [1, 0.8, 1],
+                          }
+                        : {}
+                    }
+                    transition={{
+                      duration: 0.5,
+                      delay: i * 0.05,
+                    }}
+                    className="inline-block whitespace-pre font-sans tracking-tight"
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </span>
+            {wordIndex < all.length - 1 && " "}
+          </React.Fragment>
+        ));
+      })()}
     </h2>
   );
 }

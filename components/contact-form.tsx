@@ -91,7 +91,7 @@ export const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="form__button self-start flex items-center justify-center bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
+          className="form__button self-center sm:self-start flex items-center justify-center bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
         >
           Submit
         </button>

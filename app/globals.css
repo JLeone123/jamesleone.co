@@ -100,7 +100,7 @@ img {
   /* height: 100%; */
   /* @apply mt-[5em]; */
   /* @apply scroll-mt-[100rem] flex flex-col justify-center; */
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center text-center w-full;
   @apply scroll-mt-[100rem];
   @apply mt-[5em] mb-[15em];
 }
@@ -167,10 +167,10 @@ img {
 }
 
 .intro__name {
-  /* Text-resizing */
-  /* leaving the line-heading the same - this is why the
-  text is slightly lower than the starting line height of its flex neighbors */
-  font-size: calc(0.75vw + 2.7em);
+  /* Fluid size with a floor for small phones and a cap for wide screens,
+  so the name never overflows (and pushes off-center) on mobile */
+  font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);
+  @apply leading-tight;
   /* Apply gradient */
   @apply bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text;
   @apply mb-1;
@@ -223,10 +223,12 @@ img {
 }
 
 .intro__colorful-text {
-  /* Text-resizing */
-  /* @apply text-[7vmin]; */
-  font-size: calc(1vw + 1.8em);
+  /* Mobile: scales with the viewport between 1.5rem and 2.25rem so the
+  longest phrase fits on one line on small phones */
+  font-size: clamp(1.5rem, 1.1rem + 3vw, 2.25rem);
   @apply sm:text-[5.5vmin];
+  /* Centered, and wraps only between words (see colourful-text.tsx) */
+  @apply text-center leading-tight w-full;
   /* Default color when first loading onto the screen */
   @apply text-slate-50;
   @apply mb-8;
