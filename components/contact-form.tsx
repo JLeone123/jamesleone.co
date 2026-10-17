@@ -17,7 +17,7 @@ export const ContactForm = () => {
       <h2 className="contact__header text-center text-zinc-200 mb-2">
         Let's connect.
       </h2>
-      <p className="contact__subheader text-slate-300 mb-10 text-center">
+      <p className="contact__subheader text-ink-muted mb-10 text-center">
         Please feel free to contact me below or at{" "}
         <span className="underline underline-offset-4">
           jsalleo13@gmail.com
@@ -39,18 +39,18 @@ export const ContactForm = () => {
       >
         <label
           htmlFor="email"
-          className="form__label mb-2 text-slate-300 rounded-lg"
+          className="form__label mb-2 text-ink-muted rounded-lg"
         >
-          <span className="text-slate-300 group flex gap-x-2 leading-none">
+          <span className="text-ink-muted group flex gap-x-2 leading-none">
             Email{" "}
-            <MdOutlineEmail className="text-slate-300 group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
+            <MdOutlineEmail className="text-ink-muted group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
           </span>
         </label>
         <input
           id="email"
           name="email"
           type="email"
-          className="form__input border border-zinc-200 pl-2 py-2 rounded-lg mb-4"
+          className="form__input border border-line/60 pl-2 py-2 rounded-lg mb-4"
           autoComplete="on"
           placeholder="you@email.com"
           maxLength={500}
@@ -58,32 +58,32 @@ export const ContactForm = () => {
         />
         <label
           htmlFor="subject"
-          className="text-[1em] mb-2 text-slate-300 rounded-lg"
+          className="text-[1em] mb-2 text-ink-muted rounded-lg"
         >
-          <span className="form__label text-slate-300 group flex gap-x-2 leading-none">
+          <span className="form__label text-ink-muted group flex gap-x-2 leading-none">
             Subject{" "}
-            <IoEarth className="text-slate-300 group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
+            <IoEarth className="text-ink-muted group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
           </span>
         </label>
         <input
           id="subject"
           name="subject"
           type="text"
-          className="form__input border border-zinc-200 pl-2 py-2 rounded-lg mb-4"
+          className="form__input border border-line/60 pl-2 py-2 rounded-lg mb-4"
           autoComplete="on"
           placeholder="Subject of your message..."
           maxLength={500}
           required
         />
         <label htmlFor="message" className="text-[1em] mb-3 rounded-lg">
-          <span className="form__label flex gap-x-2 leading-none text-slate-300">
-            Message <LuMessageCircleMore className="text-slate-300" />
+          <span className="form__label flex gap-x-2 leading-none text-ink-muted">
+            Message <LuMessageCircleMore className="text-ink-muted" />
           </span>
         </label>
         <textarea
           id="message"
           name="message"
-          className="form__input pl-2 py-2 border border-zinc-200 rounded-lg h-40 w-[full] mb-5"
+          className="form__input pl-2 py-2 border border-line/60 rounded-lg h-40 w-[full] mb-5"
           placeholder="Your message..."
           autoComplete="on"
           maxLength={1000}
@@ -91,7 +91,7 @@ export const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="form__button self-center sm:self-start flex items-center justify-center bg-zinc-100 text-zinc-800/90 border-zinc-800/90 px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
+          className="form__button self-center sm:self-start flex items-center justify-center bg-pill text-pill-ink px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
         >
           Submit
         </button>

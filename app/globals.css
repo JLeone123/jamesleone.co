@@ -1,5 +1,44 @@
 @import "tailwindcss";
 
+/* `light:` variant, active when <html data-theme="light"> (set in app/layout.tsx) */
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+/**** Theme tokens ****/
+/* Dark is the default; light applies when chosen with the toggle,
+   or (before JS runs) when the OS prefers light */
+:root,
+:root[data-theme="dark"] {
+  --page: #0b0c0f;
+  --ink: #ededed;
+  --ink-muted: #cbd5e1;
+  --line: #fafafa;
+  --pill: #f4f4f5;
+  --pill-ink: #27272a;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --page: #f7f7f5;
+  --ink: #18181b;
+  --ink-muted: #475569;
+  --line: #27272a;
+  --pill: #18181b;
+  --pill-ink: #fafafa;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --page: #f7f7f5;
+    --ink: #18181b;
+    --ink-muted: #475569;
+    --line: #27272a;
+    --pill: #18181b;
+    --pill-ink: #fafafa;
+    color-scheme: light;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,6 +61,12 @@ text-[#2a89d2]
   --color-aceternity-pink: var(--aceternity-pink);
   --color-aceternity-red: var(--aceternity-red);
   --color-aceternity-orange: var(--aceternity-orange);
+  --color-page: var(--page);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-pill: var(--pill);
+  --color-pill-ink: var(--pill-ink);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,9 +97,9 @@ body {
   /* background: #0c0f1d; - current; */
   /* background: #0d0e10; */
   /* background: #111315; */
-  background: #0b0c0f;
-
-  color: #ededed;
+  background: var(--page);
+  color: var(--ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
   /* height: 100%; */
   margin: 0;
   font-size: 16px;
@@ -173,6 +218,7 @@ img {
   @apply leading-tight;
   /* Apply gradient */
   @apply bg-linear-45 from-blue-300 via-blue-400 to-blue-500 text-transparent bg-clip-text;
+  @apply light:from-blue-500 light:via-blue-600 light:to-blue-700;
   @apply mb-1;
   @apply text-center;
 }
@@ -181,6 +227,7 @@ img {
   font-size: calc(0.75vw + 2.7em);
   @apply sm:text-[3em];
   @apply bg-linear-45 from-teal-400 via-cyan-500 to-sky-500 text-transparent bg-clip-text;
+  @apply light:from-teal-600 light:via-cyan-700 light:to-sky-700;
 }
 
 .contact__header {
@@ -190,6 +237,7 @@ img {
   font-size: calc(0.75vw + 2.7em);
   @apply sm:text-[3em];
   @apply bg-linear-45 from-teal-400 via-cyan-500 to-sky-500 text-transparent bg-clip-text;
+  @apply light:from-teal-600 light:via-cyan-700 light:to-sky-700;
 }
 
 .contact__subheader {
@@ -209,17 +257,17 @@ img {
 .form__input {
   font-size: calc(0.75vw + 0.7em);
   @apply sm:text-[1em];
-  @apply focus:outline-2 focus:outline-zinc-200;
+  @apply focus:outline-2 focus:outline-ink-muted;
 }
 
 .form__button {
   font-size: calc(1vw + 0.55em);
-  @apply sm:text-[0.85em] outline-2 outline-zinc-200/20;
+  @apply sm:text-[0.85em] outline-2 outline-line/20;
   @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02] transition;
 }
 
 .intro__text {
-  @apply text-center text-[1.25em] w-full max-w-222 text-slate-300 mt-[2em];
+  @apply text-center text-[1.25em] w-full max-w-222 text-ink-muted mt-[2em];
 }
 
 .intro__colorful-text {
@@ -230,7 +278,7 @@ img {
   /* Centered, and wraps only between words (see colourful-text.tsx) */
   @apply text-center leading-tight w-full;
   /* Default color when first loading onto the screen */
-  @apply text-slate-50;
+  @apply text-ink;
   @apply mb-8;
 }
 
@@ -250,9 +298,9 @@ img {
   /* Fluid font size: grows with the viewport but is capped on large screens */
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
   /* em-based padding so the pill scales with its text */
-  @apply px-[1.25em] py-[0.6em] mt-6 md:mt-0 bg-zinc-100 text-zinc-800/90 border-1 border-transparent;
+  @apply px-[1.25em] py-[0.6em] mt-6 md:mt-0 bg-pill text-pill-ink border-1 border-transparent;
   /* apply border styles */
-  @apply outline-2 outline-zinc-200/20 rounded-full whitespace-nowrap;
+  @apply outline-2 outline-line/20 rounded-full whitespace-nowrap;
 
   /* apply interactive animations */
   @apply focus:outline-2 hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition;
@@ -280,5 +328,12 @@ img {
 /* GitHub / LinkedIn icon links on the home section */
 .social-icon {
   font-size: clamp(2.5rem, 2rem + 1vw, 3rem);
-  @apply text-zinc-100;
+  @apply text-ink;
+}
+
+/* Light / dark toggle (components/theme-toggle.tsx) */
+.theme-toggle {
+  @apply fixed top-4 right-4 z-50 flex items-center justify-center rounded-full cursor-pointer;
+  @apply size-11 text-[1.25rem] text-ink bg-page/70 backdrop-blur-md border border-line/25;
+  @apply hover:scale-[1.10] focus-visible:scale-[1.10] focus-visible:outline-2 focus-visible:outline-ink-muted active:scale-[1.05] transition;
 }
