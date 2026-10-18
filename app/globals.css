@@ -334,8 +334,9 @@ body::after {
 }
 
 .form__button {
-  font-size: calc(1vw + 0.55em);
-  @apply sm:text-[0.95em] button-soft;
+  /* Same size and shape as the "Let's connect!" pill */
+  font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
+  @apply px-[1.75em] py-[0.6em] rounded-full whitespace-nowrap text-center cursor-pointer button-soft;
   @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02];
 }
 
@@ -404,11 +405,14 @@ body::after {
 
 /* Shared button style for "Let's connect!" and the contact form's Submit. */
 @utility button-soft {
-  /* Dark gray in both themes, no border or outline.
+  /* Dark gray in dark mode, light gray in light mode; no border or outline.
      A ring appears only for keyboard focus (Tab). */
   @apply bg-gray-900 text-gray-100 border-0 outline-none transition;
   @apply hover:bg-gray-800 focus:bg-gray-800;
   @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500;
+  /* Light mode: softer, lower-contrast gray */
+  @apply light:bg-gray-200 light:text-gray-800 light:hover:bg-gray-300 light:focus:bg-gray-300;
+  @apply light:focus-visible:outline-gray-400;
 }
 
 .contact-button__link {
