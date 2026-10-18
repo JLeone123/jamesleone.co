@@ -27,10 +27,11 @@ const Home = () => {
         <Image
           src={leoneProfilePicture}
           className="border border-line/40 w-[min(45%,15rem)] md:w-[clamp(10rem,18vw,13rem)] object-top self-center rounded-full object-cover aspect-square hover:scale-[1.10] active:scale-[1.10] transition"
-          decoding="async"
           alt="Professional headshot of James Leone"
-          quality={100}
-          priority={true}
+          // Matches the CSS widths above, so the browser downloads a ~240-480px file
+          sizes="(min-width: 768px) 13rem, min(45vw, 15rem)"
+          // Above the fold: load it right away (the LCP image)
+          preload
         />
         <IntroText />
         {/* buttons: below the text on mobile, beside the image from md up */}
