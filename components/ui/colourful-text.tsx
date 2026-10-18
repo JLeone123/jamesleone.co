@@ -2,7 +2,7 @@
 import React from "react";
 
 // Cycles through `words` every 5 seconds. Each letter does a small staggered
-// lift-and-fade (CSS keyframes in globals.css, transform + opacity only).
+// lift, blur and fade (CSS keyframes in globals.css), no animation library.
 // Text color comes from CSS (.intro__colorful-text -> var(--ink)).
 export function ColourfulText({ words }: { words: string[] }) {
   const [count, setCount] = React.useState(0);

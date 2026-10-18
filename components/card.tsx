@@ -1,6 +1,5 @@
-import React from "react";
 import Image from "next/image";
-import leoneProfilePicture from "@/public/leone-profile-picture.png";
+import leoneProfilePicture from "@/public/leone-profile-picture.jpg";
 
 export const Card = () => {
   return (

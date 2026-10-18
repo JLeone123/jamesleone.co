@@ -16,8 +16,8 @@
   --pill-ink: #27272a;
   /* Texture strength. Keep the light:dark ratio at 12 : (255 - 12) so it
      balances against #0c0c0c; scale both together to make it stronger/weaker */
-  --paper-light: 0.0148;
-  --paper-dark: 0.3;
+  --paper-light: 0.0222;
+  --paper-dark: 0.2;
   color-scheme: dark;
 }
 
@@ -29,8 +29,8 @@
   --pill: #18181b;
   --pill-ink: #fafafa;
   /* Keep the light:dark ratio at 248 : (255 - 248) to balance against #f8f8f8 */
-  --paper-light: 0.4;
-  --paper-dark: 0.0113;
+  --paper-light: 0.6;
+  --paper-dark: 0.017;
   color-scheme: light;
 }
 
@@ -42,8 +42,8 @@
     --line: #27272a;
     --pill: #18181b;
     --pill-ink: #fafafa;
-    --paper-light: 0.4;
-    --paper-dark: 0.0113;
+    --paper-light: 0.6;
+    --paper-dark: 0.017;
     color-scheme: light;
   }
 }
@@ -108,7 +108,9 @@ body {
   /* background: #111315; */
   background: var(--page);
   color: var(--ink);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   /* height: 100%; */
   margin: 0;
   font-size: 16px;
@@ -133,7 +135,9 @@ body::before {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='f' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2.5 0 0 0 -1.2502'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E"),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='6'%3E%3CfeDistantLight azimuth='225' elevation='45'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.7 0 0 0 -0.4822'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
-  background-size: 200px 200px, 400px 400px;
+  background-size:
+    200px 200px,
+    400px 400px;
   opacity: var(--paper-light);
 }
 
@@ -146,7 +150,9 @@ body::after {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='f' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.5 0 0 0 1.2502'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E"),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.025' numOctaves='4' seed='11' stitchTiles='stitch'/%3E%3CfeDiffuseLighting lighting-color='%23fff' surfaceScale='6'%3E%3CfeDistantLight azimuth='225' elevation='45'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.7 0 0 0 0.4822'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
-  background-size: 200px 200px, 400px 400px;
+  background-size:
+    200px 200px,
+    400px 400px;
   opacity: var(--paper-dark);
 }
 
@@ -329,8 +335,8 @@ body::after {
 
 .form__button {
   font-size: calc(1vw + 0.55em);
-  @apply sm:text-[0.85em] outline-2 outline-line/20;
-  @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02] transition;
+  @apply sm:text-[0.85em] button-soft;
+  @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02];
 }
 
 .intro__text {
@@ -358,7 +364,8 @@ body::after {
   }
 }
 
-/* Letters of the colorful text (components/ui/colourful-text.tsx) */
+/* Letters of the colorful text (components/ui/colourful-text.tsx).
+   Same motion as the old Framer Motion version: a small lift, blur and fade. */
 .colorful-letter {
   @apply inline-block whitespace-pre font-sans tracking-tight;
 }
@@ -367,16 +374,17 @@ body::after {
   animation: colorful-letter 0.5s ease-in-out both;
 }
 
-/* transform + opacity only, so the browser can animate it off the main thread */
 @keyframes colorful-letter {
   0%,
   100% {
     transform: translateY(0) scale(1);
+    filter: blur(0);
     opacity: 1;
   }
   50% {
     transform: translateY(-3px) scale(1.01);
-    opacity: 0.35;
+    filter: blur(5px);
+    opacity: 0.8;
   }
 }
 
@@ -394,6 +402,15 @@ body::after {
   @apply mx-auto;
 } */
 
+/* Shared button style for "Let's connect!" and the contact form's Submit. */
+@utility button-soft {
+  /* Dark gray in both themes, no border or outline.
+     A ring appears only for keyboard focus (Tab). */
+  @apply bg-gray-900 text-gray-100 border-0 outline-none transition;
+  @apply hover:bg-gray-800 focus:bg-gray-800;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500;
+}
+
 .contact-button__link {
   /* centered in the .home grid */
   @apply justify-self-center;
@@ -401,12 +418,12 @@ body::after {
   /* Fluid font size: grows with the viewport but is capped on large screens */
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
   /* em-based padding so the pill scales with its text */
-  @apply px-[1.25em] py-[0.6em] mt-[2.75rem] md:mt-[3.5rem] bg-pill text-pill-ink border-1 border-transparent;
-  /* apply border styles */
-  @apply outline-2 outline-line/20 rounded-full whitespace-nowrap;
+  @apply px-[1.25em] py-[0.6em] mt-[2.75rem] md:mt-[3.5rem] rounded-full whitespace-nowrap;
+  /* Dark gray, no border/outline (shared with Submit, see button-soft) */
+  @apply button-soft;
 
   /* apply interactive animations */
-  @apply focus:outline-2 hover:scale-[1.10] focus:scale-[1.10] hover:outline-0 active:scale-[1.07] transition;
+  @apply hover:scale-[1.10] focus:scale-[1.10] active:scale-[1.07];
 }
 
 /**** Side info styles ****/
