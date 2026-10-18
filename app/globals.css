@@ -335,7 +335,7 @@ body::after {
 
 .form__button {
   font-size: calc(1vw + 0.55em);
-  @apply sm:text-[0.85em] button-soft;
+  @apply sm:text-[0.95em] button-soft;
   @apply hover:scale-[1.05] focus:scale-[1.05] active:scale-[1.02];
 }
 
