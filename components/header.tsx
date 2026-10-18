@@ -12,8 +12,8 @@ export const Header = () => {
         // initial={{ opacity: 0, y: -100 }}
         // animate={{ opacity: 1, y: 0 }}
       >
-        <nav className="flex fixed top-[0.9em] left-1/2 -translate-x-1/2 cursor-pointer">
-          <ul className="w-full flex gap-20">
+        <nav className="grid fixed top-[0.9em] left-1/2 -translate-x-1/2 cursor-pointer">
+          <ul className="w-full grid grid-flow-col gap-20">
             {links.map((link) => {
               return (
                 <li

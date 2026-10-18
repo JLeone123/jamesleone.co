@@ -12,7 +12,7 @@ export const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="contact flex flex-col justify-center items-center mb-[3em] scroll-mt-[3rem]"
+      className="contact grid justify-items-center mb-[3em] scroll-mt-[3rem]"
     >
       <h2 className="contact__header text-center text-zinc-200 mb-2">
         Let's connect.
@@ -24,7 +24,7 @@ export const ContactForm = () => {
         </span>
       </p>
       <form
-        className="flex flex-col w-full"
+        className="grid w-full"
         action={async (formData) => {
           const { data, error } = await sendForm(formData);
 
@@ -41,7 +41,7 @@ export const ContactForm = () => {
           htmlFor="email"
           className="form__label mb-2 text-ink-muted rounded-lg"
         >
-          <span className="text-ink-muted group flex gap-x-2 leading-none">
+          <span className="text-ink-muted group grid grid-flow-col justify-start gap-x-2 leading-none">
             Email{" "}
             <MdOutlineEmail className="text-ink-muted group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
           </span>
@@ -60,7 +60,7 @@ export const ContactForm = () => {
           htmlFor="subject"
           className="text-[1em] mb-2 text-ink-muted rounded-lg"
         >
-          <span className="form__label text-ink-muted group flex gap-x-2 leading-none">
+          <span className="form__label text-ink-muted group grid grid-flow-col justify-start gap-x-2 leading-none">
             Subject{" "}
             <IoEarth className="text-ink-muted group-focus:translate-x-1 group-focus:-translate-y-1 transition" />
           </span>
@@ -76,7 +76,7 @@ export const ContactForm = () => {
           required
         />
         <label htmlFor="message" className="text-[1em] mb-3 rounded-lg">
-          <span className="form__label flex gap-x-2 leading-none text-ink-muted">
+          <span className="form__label grid grid-flow-col justify-start gap-x-2 leading-none text-ink-muted">
             Message <LuMessageCircleMore className="text-ink-muted" />
           </span>
         </label>
@@ -91,7 +91,7 @@ export const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="form__button self-center sm:self-start flex items-center justify-center bg-pill text-pill-ink px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
+          className="form__button justify-self-center sm:justify-self-start grid place-items-center bg-pill text-pill-ink px-9 py-3 rounded-full w-[30%] sm:w-auto max-w-30 mb-5"
         >
           Submit
         </button>

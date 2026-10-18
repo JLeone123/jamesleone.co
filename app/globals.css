@@ -157,11 +157,13 @@ body::after {
 }
 
 .row {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .row--justify-between {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
 }
 
@@ -185,40 +187,40 @@ body::after {
 .home {
   /* height: 100%; */
   /* @apply mt-[5em]; */
-  /* @apply scroll-mt-[100rem] flex flex-col justify-center; */
-  @apply flex flex-col justify-center items-center text-center w-full;
+  @apply grid justify-items-center text-center w-full;
   @apply scroll-mt-[100rem];
   @apply mt-[5em] mb-[15em];
 }
 
-/* Image, intro text and buttons. Stacked on mobile. On medium and larger
-   screens: image and buttons side by side, centered, with the text below */
+/* Image, intro text and buttons.
+   Mobile: one centered column (image, text, buttons).
+   md+: a 4-column grid  [1fr | image | buttons | 1fr]  with the text in a
+   second row spanning all columns. The outer 1fr columns keep the image and
+   buttons centered, and because the text spans those flexible columns it
+   doesn't stretch the image/button columns. */
 .home__body {
-  @apply flex flex-col items-center w-full;
-  @apply md:flex-row md:flex-wrap md:justify-center md:items-center;
-  @apply md:gap-x-[clamp(2.5rem,6vw,5rem)] md:gap-y-[1.25rem];
+  @apply grid justify-items-center w-full;
+  @apply md:grid-cols-[1fr_auto_auto_1fr] md:items-center;
+  @apply md:gap-x-[clamp(2.5rem,6vw,5rem)] md:gap-y-[2.5rem];
 }
 
-/* md+ order: image, buttons, a line break, then the text on its own row.
-   (The break is needed: with its narrower max-width the text would otherwise
-   fit beside the buttons on wide screens.) */
+.home__body > img {
+  @apply md:col-start-2 md:row-start-1;
+}
+
 .home__body .home__buttons {
-  @apply md:order-1;
-}
-
-.home__break {
-  @apply hidden md:block md:order-2 md:basis-full md:h-0;
+  @apply md:col-start-3 md:row-start-1;
 }
 
 .home__body .intro__text {
   /* Narrower on md+ (max 36rem, i.e. 576px), centered under the image and buttons */
-  @apply md:order-3 md:max-w-[36rem];
+  @apply md:col-span-full md:row-start-2 md:max-w-[36rem];
 }
 
 .home__buttons {
-  @apply flex flex-col items-center gap-y-5 mt-[4em];
+  @apply grid justify-items-center gap-y-5 mt-[4em];
   /* md+: a column to the right of the image, pills the same width */
-  @apply md:mt-0 md:items-stretch;
+  @apply md:mt-0 md:justify-items-stretch;
 }
 
 .projects {
@@ -227,14 +229,12 @@ body::after {
 
 /**** Main styles ****/
 .main {
-  /* @apply flex flex-col justify-center items-center; */
-  @apply flex flex-col items-center;
+  @apply grid justify-items-center;
 }
 
 /**** Hero styles ****/
 .hero {
-  /* @apply flex gap-x-5; */
-  @apply flex;
+  @apply grid grid-flow-col;
 }
 
 /**** Card styles ****/
@@ -243,13 +243,12 @@ body::after {
   @apply w-[40%] md:w-[45%];
   /* @apply border-2 border-red-400; */
 
-  /* Making the card a flexbox for easier positioning */
-  @apply md:flex md:items-center;
+  /* A grid for easier positioning */
+  @apply md:grid md:items-center;
 }
 
 .card__content {
-  @apply flex-col items-center relative bg-zinc-700/10 py-3 px-2.25 md:py-4 md:px-3 rounded-lg;
-  /* @apply flex-col items-center relative bg-zinc-400 py-0.25 px-0.25 rounded-lg; */
+  @apply grid justify-items-center relative bg-zinc-700/10 py-3 px-2.25 md:py-4 md:px-3 rounded-lg;
 }
 
 .card__background {
@@ -275,11 +274,8 @@ body::after {
   /* @apply px-3 gap-5 text-center w-[80%]; */
   @apply text-center w-[80%];
 
-  /* Make the intro a flex-container 
-  with the direction of items being a column */
-  @apply flex flex-col;
-
-  /* Apply flex-item properties, if any */
+  /* A single-column grid */
+  @apply grid;
 }
 
 .intro__name {
@@ -394,14 +390,13 @@ body::after {
 
 /* Button is still off center */
 /* .contact-button__container {
-  // @apply flex flex-col items-center;
   @apply inline-block;
   @apply mx-auto;
 } */
 
 .contact-button__link {
-  /* apply flex item rule */
-  @apply self-center;
+  /* centered in the .home grid */
+  @apply justify-self-center;
 
   /* Fluid font size: grows with the viewport but is capped on large screens */
   font-size: clamp(1rem, 0.85rem + 0.5vw, 1.2rem);
@@ -441,7 +436,7 @@ body::after {
 
 /* Light / dark toggle (components/theme-toggle.tsx) */
 .theme-toggle {
-  @apply fixed top-4 right-4 z-50 flex items-center justify-center rounded-full cursor-pointer;
+  @apply fixed top-4 right-4 z-50 grid place-items-center rounded-full cursor-pointer;
   @apply size-11 text-[1.25rem] text-ink bg-page/70 backdrop-blur-md border border-line/25;
   @apply hover:scale-[1.10] focus-visible:scale-[1.10] focus-visible:outline-2 focus-visible:outline-ink-muted active:scale-[1.05] transition;
 }
